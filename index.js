@@ -1,12 +1,13 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 const port = process.env.PORT || 4001;
+const routes = require('./routes/employees')
 
-app.use(employeesRouter);
-app.use(departmentRouter);
+console.log("yo its working");
 
-
-
+app.use(bodyParser.json());
+app.use(routes);
 
 
 
