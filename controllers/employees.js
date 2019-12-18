@@ -1,7 +1,7 @@
 const express = require("express");
 const mysql = require("mysql");
 const pool = require("../mySQL/connections");
-const { handleSQLError } = require("../mySQL/error");
+const { handleSQLError } = require("../sql/error");
 
 const getEmployees = (req, res) => {
   // SELECT ALL USERS
@@ -11,12 +11,15 @@ const getEmployees = (req, res) => {
   });
 };
 
+const getEmployeesByFirstName = (req, res) => {
+  res.send("getting employees... ");
+};
 //const controllers = express.controllers();
 
 module.exports = {
-  getEmployees
+  getEmployees,
   // getEmployeesById,
-  // getEmployeesByFirstName,
+  getEmployeesByFirstName
   // getEmployeesSalary,
   // getEmployeesDepartment,
   // getOneSalaryById

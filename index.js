@@ -13,6 +13,10 @@ app.get("/", (req, res) => {
   res.send("Welcome to our API");
 });
 
+router.get("/firstname/:first_name", (req, res) => {
+  res.send("getting employees... ");
+});
+
 app.listen(port, () => {
   console.log(`Web server is listening on port ${port}!`);
 });
