@@ -12,7 +12,7 @@ class Connection {
         password: "SQLMAMA",
         database: "employees"
       });
-
+      console.log("CONNECTED");
       return this.pool;
     }
 

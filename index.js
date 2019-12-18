@@ -1,13 +1,14 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
-const port = process.env.PORT || 4001;
+const port = 4001;
 const employeesRoutes = require("./routes/employees");
 
-console.log("yo its working");
+console.log(employeesRoutes);
+
 
 app.use(bodyParser.json());
-app.use(employeesRoutes);
+app.use("/employees", employeesRoutes);
 
 app.get("/", (req, res) => {
   res.send("Welcome to our API");
