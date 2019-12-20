@@ -4,11 +4,15 @@ const employeesController = require("../controllers/employees");
 
 router.get("/employees", employeesController.getEmployees);
 
-app.get("/firstname/:first_name");
+// app.get("/firstname/:first_name");
 
 // router.get('/employees/:emp_no', employeesController.getEmployeesById);
 
-// router.get('/first_name/:first_name', employeesController.getEmployeesByFirstName);
+router.get(
+  "/first_name/:first_name",
+  employeesController.getEmployeesByFirstName
+);
+
 // router.get('/salaries', employeesController.getEmployeesSalary);
 
 // router.get('/departments', employeesController.getEmployeesDepartment);
